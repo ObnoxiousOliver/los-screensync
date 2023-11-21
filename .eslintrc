@@ -1,0 +1,19 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "no-trailing-spaces": "error",
+    "comma-dangle": ["error", "never"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "no-constant-condition": "off"
+  }
+}

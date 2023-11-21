@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Video</title>
+  </head>
+  <body>
+    <video style="
+      position: fixed;
+      inset: 0;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+      cursor: none;
+    " id="video"></video>
+    <!-- You can also require other files to run in this process -->
+    <script>
+      const video = document.getElementById('video')
+
+      bridge.onSource((source) => {
+        video.src = source.path
+      })
+
+      bridge.onPlay(() => {
+        video.play()
+      })
+
+      bridge.onStop(() => {
+        video.pause()
+      })
+    </script>
+  </body>
+</html>
